@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#addButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#addButton:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.edit-mode .view-mode {
+    display: none;
+}
+
+.view-mode .edit-mode {
+    display: none;
+}
+
+.edit-input {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.icon-button:hover {
+    color: #000;
+}
+
+.edit-button {
+    color: #2980b9;
+}
+
+.delete-button {
+    color: #e74c3c;
+}
+
+.save-button {
+    color: #27ae60;
+}
+
+@media (max-width: 480px) {
+    .input-container {
+        flex-direction: column;
+    }
+    #todoInput, #addButton {
+        width: 100%;
+        border-radius: 4px;
+    }
+    #todoInput {
+        margin-bottom: 10px;
+    }
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .todo-text {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .todo-actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+    .edit-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
